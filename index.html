@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ghost Loreley - CRUD</title>
+    <!-- Styles CSS -->
+     <link async rel="stylesheet" href="./src/styles/desktop/main.css">
+     <link async rel="stylesheet" href="./src/styles/android/main.css">
+     <link rel="stylesheet" href="./src/styles/modal.css">
+</head>
+<body onload="showM()">
+    <main>
+        <div class="container">
+            <div class="title">
+                <h1>Ghost Of Loreley</h1>
+                <h2>Create Read Update Delete</h2>
+            </div>
+            <button class="add" type="submit">ADD+</button>
+        </div>
+    </main>
+
+    <section>
+        <button class="floating-button">
+            <i><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/> 
+              </svg></i>
+        </button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>LAST NAME</th>
+                    <th>GENDER</th>
+                    <th>BIRTHDAY</th>
+                    <th>EMAIL</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-title="id" class="id">0</td>
+                    <td data-title="name" class="name">Minerva</td>
+                    <td data-title="last-name" class="last-name">Alves</td>
+                    <td data-title="gender" class="gender">M</td>
+                    <td data-title="birthday" class="birthday">20-07-2024</td>
+                    <td data-title="email" class="email">minervaalves@gmail.com</td>
+                    <td data-title="actions" class="actions">
+                        <button><i class="fa-solid fa-pen-to-square" id="edit"></i><button>
+                        <button><i class="fa-solid fa-trash" id="delete"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <dialog id="modal">
+        <header>
+            <i class="fa-solid fa-x" id="closeIcon"></i>
+            <div class="title">
+                <h1>INSERT DATA</h1>
+                <p>We'll use a CRUD to insert data on <br> LocalStorage.</p>
+            </div>
+            <div id="validate">
+                
+            </div>
+        </header>
+
+
+        <!--Formulario-->
+        <form action="#" method="post" name="form" novalidate>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="David" required>
+            </div>
+            <div class="field">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Junior" required>
+            </div>
+            <div class="field-checkbox">
+                <p>Gender</p>
+                <label>
+                    <input type="radio" name="gender" value="male" required> M
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" required> F
+                </label>
+            </div>
+            <div class="nasc">
+                <label for="nasc" id="data-nasc"></label>
+                <input type="date" id="nasc" name="birthday" required>
+                <label for="nasc"><p>MM//DD/YYYY</p></label>
+            <div class="field">
+                <label for="email"><p>EMAIL</p></label>
+                <input type="text" id="email" placeholder="robertocarlos.oliveira@gmail.com" required>
+            </div>
+            
+            <div class="enviar">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </dialog>
+
+    <!-- Dialog -->
+    <script async src="./src/js/modal.js"></script>
+
+    <!-- Validate Form -->
+     <script async src="./src/js/validateform.js"></script>
+
+    <!-- Font Awasome Icons-->
+    <script async src="https://kit.fontawesome.com/44d91e0751.js" crossorigin="anonymous"></script>
+</body>
+</html>

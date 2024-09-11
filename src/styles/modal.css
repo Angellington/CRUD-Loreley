@@ -1,0 +1,223 @@
+dialog {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    width: 432px;
+    border: 2px solid rgba(66, 66, 66, .2);
+    border-radius: 10px;
+
+    overflow: auto;
+    
+    position: fixed;
+
+    margin: auto;
+    border: none;
+    background-color: white;
+
+}
+
+
+dialog::-webkit-scrollbar {
+    display: none;
+  }
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+
+/*  Modal Header */
+header {
+    padding: 1.5em 1.5em 0em 1.5em;
+}
+header > i {
+    float: right;
+}
+header .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+header #closeIcon {
+    cursor: pointer;
+
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    font-size: 18px;
+    transition: 0.4s;
+}
+header #closeIcon:hover {
+    transform: scale(1.44);
+}
+
+
+
+dialog .modal {
+    background-color: #65558F;
+}
+
+dialog .novo {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+dialog #Cabecario {
+    padding: 20px 0px 0px 50px;
+}
+dialog #Cabecario h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: rgba(255, 228, 196, 0);
+    margin: 0;
+    padding: 4px;
+}
+dialog #Cabecario p {
+    font-family: sans-serif;
+    color: #75757585;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 255, 255, 0);
+}
+dialog .icone {
+    background-color: rgba(252, 252, 19, 0);
+    cursor: pointer;
+    padding: 16px;
+    margin: 0;
+    height: fit-content;
+    display: flex;
+    justify-content: end;
+    font-size: 18px;
+    transition: 0.4s;
+}
+dialog .icone:hover {
+    transform: scale(1.40);
+}
+
+/* Formulario em Si*/
+form {
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    color: #1E1E1E;
+    margin-bottom: 1rem;
+}
+.field label {
+    margin-bottom: 4px;
+}
+.field input {
+    border: 1px solid #D9D9D9;
+    padding: 12px;
+    border-radius: 8px;
+}
+.field input::placeholder {
+   color: #B3B3B3; 
+}
+
+.field-checkbox {
+    background-color: rgba(255, 228, 196, 0);
+    margin-bottom: 12px;
+}
+.field-checkbox p {
+    padding: 0;
+    margin: 0;
+}
+.nasc {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    outline: none;    
+    margin-top: 24px;
+}
+
+
+.nasc > label {
+    color: #000000;
+    font-size: 12px;
+    margin-left: 14px; 
+    background-color: #ffffff;
+    padding: 0px 8px 0 8px;   
+    position: relative;
+    outline: none;
+}
+
+.nasc > #data-nasc {
+    position: absolute;
+    transform: translateY(-10px);
+    margin-bottom: 200p;
+    z-index: 3;
+    line-height: 20px;
+
+}
+
+.nasc > input {
+    padding: 12px;
+    width: 70%;
+    box-sizing: border-box;
+    border: 1px solid #49454F;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s ease;
+}
+.nasc > input:focus, .nasc > .nasc input:valid {
+    border: 3px solid #65558F;
+}
+
+.nasc label > p {
+    padding: 0;
+    margin: 10px 0 10px 0px;
+}
+
+.field label > p {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+form .enviar {
+    background-color: #65558f00;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+form .enviar input{
+    background-color: #2C2C2C;
+    color: white;
+    width: 40%;
+    width: 249px;
+    height: 40px;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+form .enviar input:hover {
+    transform: scale(1.09);
+}
+
+
+/* Validate */
+.validate {
+    display: flex;
+    padding: 12px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    background-color: green;
+    margin: 12px;
+    border: 2px groove black;
+}
