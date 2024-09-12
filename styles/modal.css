@@ -211,7 +211,7 @@ form .enviar input:hover {
 
 
 /* Validate */
-.validate {
+.validate, .bad {
     display: flex;
     padding: 12px;
     text-align: center;
@@ -220,4 +220,8 @@ form .enviar input:hover {
     background-color: green;
     margin: 12px;
     border: 2px groove black;
+}
+
+.bad {
+    background-color: red;
 }

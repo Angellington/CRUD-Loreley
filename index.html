@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ghost Loreley - CRUD</title>
     <!-- Styles CSS -->
-     <link async rel="stylesheet" href="./src/styles/desktop/main.css">
-     <link async rel="stylesheet" href="./src/styles/android/main.css">
-     <link rel="stylesheet" href="./src/styles/modal.css">
+     <link async rel="stylesheet" href="./styles/desktop/main.css">
+     <link async rel="stylesheet" href="./styles/android/main.css">
+     <link rel="stylesheet" href="./styles/modal.css">
 </head>
-<body onload="showM()">
+<body>
     <main>
         <div class="container">
             <div class="title">
@@ -64,6 +64,7 @@
                 <h1>INSERT DATA</h1>
                 <p>We'll use a CRUD to insert data on <br> LocalStorage.</p>
             </div>
+
             <div id="validate">
                 
             </div>
@@ -71,7 +72,7 @@
 
 
         <!--Formulario-->
-        <form action="#" method="post" name="form" novalidate>
+        <form action="#" method="post" name="form">
             <div class="field">
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="David" required>
@@ -95,20 +96,23 @@
                 <label for="nasc"><p>MM//DD/YYYY</p></label>
             <div class="field">
                 <label for="email"><p>EMAIL</p></label>
-                <input type="text" id="email" placeholder="robertocarlos.oliveira@gmail.com" required>
+                <input type="text" id="email" placeholder="robertocarlos.oliveira@gmail.com"required>
             </div>
             
             <div class="enviar">
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar" id="submit">
             </div>
         </form>
     </dialog>
 
     <!-- Dialog -->
-    <script async src="./src/js/modal.js"></script>
+    <script defer src="./src/js/modal.js"></script>
 
     <!-- Validate Form -->
-     <script async src="./src/js/validateform.js"></script>
+     <script defer src="./src/js/validateform.js"></script>
+
+     <!-- Local Storage CRUD -->
+     <script defer src="./src/js/localstorage.js"></script>
 
     <!-- Font Awasome Icons-->
     <script async src="https://kit.fontawesome.com/44d91e0751.js" crossorigin="anonymous"></script>
