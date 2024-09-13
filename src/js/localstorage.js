@@ -1,9 +1,8 @@
 window.onload = function(){
     readAll()
-    modal.showModal()
 }
 
-
+let editindex = -1; 
 
 // Make data
 let initialData = [
@@ -44,13 +43,12 @@ function readAll() {
         <td data-title="birthday" class="birthday">${item.birthday}</td>
         <td data-title="email" class="email">${item.email}</td>
         <td data-title="actions" class="actions">
-            <button><i class="fa-solid fa-pen-to-square" id="edit"></i><button>
+            <button><i class="fa-solid fa-pen-to-square" id="edit" data-index=${index}></i><button>
             <button><i class="fa-solid fa-trash" id="delete" data-index=${index}></i></button>
         </td>
         `;
 
         id++;
-
         tbody.appendChild(tr)
     })
 
@@ -61,6 +59,15 @@ function readAll() {
                 deleteItem(index)
         })
     })
+    // Botao Edit
+        document.querySelectorAll('#edit').forEach(button => {
+            button.addEventListener('click', function(){
+                const index = this.getAttribute('data-index');
+                editItem(index)
+            })
+        })
+
+    //
 }
 
 
@@ -73,28 +80,29 @@ function createAll(){
     const email = document.getElementById('email').value;
     
     // Passar os valores ao LocalStorage
-    const newItem = {
-        name, last_name, gender, birthday, email
-    }
-
+    const newItem = { name, last_name, gender, birthday, email }
     // LocalStorage enviar
     const storedData = localStorage.getItem('people');
     const data = JSON.parse(storedData) || [];
 
 
     
-    // Passar o novo Item ao data
-    data.push(newItem)
-
+    if (editindex >= 0){
+        data[editindex] = newItem;
+        editindex = -1;
+    } else {
+        data.push(newItem)
+    }
+    
     // Converter os dados para JSON e salvar no Local Storage
-    const newDataJSON = JSON.stringify(data);
-    localStorage.setItem('people', newDataJSON)
-
+    localStorage.setItem('people', JSON.stringify(data))
     // Atualizar a tabela
-    readAll()
+    readAll();
+    modal.close();
 
 }
 
+// Função para Deletar item
 function deleteItem(index){
     // Pega no local storage a chave
     const storedData = localStorage.getItem('people');
@@ -109,6 +117,31 @@ function deleteItem(index){
 
 }
 
+// Função para Editar item
+function editItem(index){
+    // Pega no logar storage a chave
+    const storedData = localStorage.getItem('people');
+    // Passar pra JSON
+    const data = JSON.parse(storedData)
 
-// Remover do LocalStorage
+    // Pegar o item do array iterando
+    const item = data[index];
+
+    // Colocar nos inputs os valores
+    const name = document.getElementById('name').value = item.name;
+    const last_name = document.getElementById('last-name').value = item.last_name;
+    
+    const birthday = document.getElementById('nasc').value = item.birthday;
+    const email = document.getElementById('email').value = item.email;
+
+    if (item.gender === 'M') {
+        document.getElementById('gender-male').checked = true;
+    } else if (item.gender === 'F') {
+        document.getElementById('gender-female').checked = true;
+    }
+
+    editindex = index;
+
+    modal.showModal();
+}
 
