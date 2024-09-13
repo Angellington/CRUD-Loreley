@@ -24,6 +24,8 @@ form.addEventListener('submit', function(e) {
 
     validationmsg(msg, isValid)
 
+    createAll()
+
     if(isValid) {
         form.reset();
         modal.close();
