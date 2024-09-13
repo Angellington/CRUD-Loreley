@@ -33,10 +33,6 @@ form.addEventListener('submit', function(e) {
         return {msg: 'Insert Data', isValid: false}
     }
 
-
-
-
-
 })
 
 function validForm(name, last_name, gender, birthday, email){
