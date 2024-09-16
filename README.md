@@ -9,9 +9,9 @@ The Ghost Of Loreley CRUD saves data on LocalStorage on browser, and load data f
 **What is CRUD?**
 
 - C - [CREATE](#create)
-- R - READ
-- U - UPDATE
-- D - DELETE
+- R - [READ](#read)
+- U - [UPDATE](#update)
+- D - [DELETE](#delete)
 
 ----
 ## CREATE
@@ -25,4 +25,36 @@ The Ghost Of Loreley CRUD saves data on LocalStorage on browser, and load data f
 <img  src="./readme-images/create-3.png" alt="Descrição da Imagem" height="200"/> 
 
 #### 3. Submit form
-<img  src="./readme-images/create-4.png" alt="Descrição da Imagem" height="200"/> 
+<img  src="./readme-images/create-4.png" alt="Descrição da Imagem" height="200"/>
+
+#### 4. Data on the form
+<img  src="./readme-images/create-5.png" alt="Descrição da Imagem" height="200"/>
+
+## READ
+> All the home page is READ area 
+> 
+<img  src="./readme-images/read.png" alt="Descrição da Imagem" height="200"/>
+
+### UPDATE
+---
+> How to update data
+
+#### 1. Click on green edit button
+
+<img  src="./readme-images/update-1.png" alt="Descrição da Imagem" height="200"/>
+
+#### 2. Change data
+
+<img  src="./readme-images/update-2.png" alt="Descrição da Imagem" height="200"/>
+
+### DELETE
+
+> How to delete data
+
+#### 1. Click on delete edit button
+
+<img  src="./readme-images/delete-1.png" alt="Descrição da Imagem" height="200"/>
+
+#### 2. After delete
+
+<img  src="./readme-images/delete-2.png" alt="Descrição da Imagem" height="200"/>
