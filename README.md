@@ -48,6 +48,7 @@ The Ghost Of Loreley CRUD saves data on LocalStorage on browser, and load data f
 <img  src="./readme-images/update-2.png" alt="Descrição da Imagem" height="200"/>
 
 ### DELETE
+---
 
 > How to delete data
 
