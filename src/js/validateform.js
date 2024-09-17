@@ -23,6 +23,9 @@ form.addEventListener('submit', function(e) {
     const {msg, isValid} = validForm(name, last_name, gender, birthday, email)
 
     validationmsg(msg, isValid)
+    if(isValid === false){
+        return
+    }
 
     createAll()
 
