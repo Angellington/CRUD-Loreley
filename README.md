@@ -59,6 +59,3 @@ The Ghost Of Loreley CRUD saves data on LocalStorage on browser, and load data f
 #### 2. After delete
 
 <img  src="./readme-images/delete-2.png" alt="Descrição da Imagem" height="200"/>
-
-
->[![My Skills](https://skillicons.dev/icons?i=html,css,js,git,github,vscode,postgres,wordpress&perline=13)](#)
